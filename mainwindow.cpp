@@ -1,5 +1,5 @@
-#include <QPalette>
-#include <QMDiArea>
+#include <QPixmap>
+#include <QPushButton>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -9,12 +9,17 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //Création du pixmap pour l'image background
+    QPixmap pix("C:/Users/paulb/Desktop/Projet/PONGPONGPONG/PongPongPong/images/pongbackground.jpg");
 
-    /*QPixmap bkgnd("images/pongbackground.jpg");
-        bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-        QPalette palette;
-        palette.setBrush(QPalette::Background, bkgnd);
-        this->setPalette(palette);*/
+    //Set du pixmap dans le label, 100%*100%, en gardant le ratio
+    ui->label_backgroundImg->setPixmap(pix.scaled(1000,1000, Qt::KeepAspectRatio));
+
+    //Changement de la couleur du title
+    ui->label_TitleGame->setStyleSheet("QLabel {color: white;}");
+
+    btn_newGame->setStyleSheeet("background-color: white;");
+
 }
 
 MainWindow::~MainWindow()
