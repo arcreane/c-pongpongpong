@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Pong</class>
+ <widget class="QMainWindow" name="Pong">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -44,7 +44,6 @@
       <widget class="QLabel" name="label_TitleGame">
        <property name="font">
         <font>
-         <family>PingPong</family>
          <pointsize>30</pointsize>
          <italic>true</italic>
         </font>
@@ -102,13 +101,12 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>250</width>
+         <width>16777215</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>Poppins</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -116,7 +114,7 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string>Nouvelle Partie</string>
+        <string>Nouvelle Partie renommée</string>
        </property>
       </widget>
      </item>
@@ -130,13 +128,12 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>250</width>
+         <width>16777215</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>Poppins</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -155,13 +152,12 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>250</width>
+         <width>16777215</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>Poppins</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -194,6 +190,9 @@
       <height>551</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Pong/images/pongbackground.jpg);</string>
+    </property>
     <property name="text">
      <string>label_BackgroundImg</string>
     </property>
@@ -202,24 +201,10 @@
    <zorder>horizontalLayoutWidget</zorder>
    <zorder>verticalLayoutWidget</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>441</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuPongPongPong">
-    <property name="title">
-     <string>PongPongPong</string>
-    </property>
-   </widget>
-   <addaction name="menuPongPongPong"/>
-  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Pong.qrc"/>
+ </resources>
  <connections/>
 </ui>
